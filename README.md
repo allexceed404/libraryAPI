@@ -12,12 +12,12 @@ It can be accessed by running an instance on local machine and also through the 
     - Clone the repository and navigate to the folder in a terminal
     - Execute the following command
         ```Powershell
-            docker-compose up
+            docker compose up
         ```
     - The app will now be accessible on [`http://localhost:3000/library`](http://localhost:3000/library/)
     - To close the app execute the following command in a terminal
         ```Powershell
-            docker-compose down
+            docker compose down
         ```
 - To access the app through GCP service, visit [`http://34.133.246.114/library/`](http://34.133.246.114/library/)
 
