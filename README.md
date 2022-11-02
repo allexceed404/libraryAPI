@@ -2,7 +2,7 @@
 
 ### Description
 This is an app that can store information on books and authors.  
-The app is a .NET WebAPI and has been written in C#. The API contacts a PostgreSQL database to serve information
+The app is a .NET WebAPI and has been written in C#. The API contacts a PostgreSQL database to serve information.  
 It can be accessed by running an instance on local machine.
 
 ### How to access the app
