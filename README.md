@@ -1,11 +1,9 @@
-# Technical Assignment 2
-
-## Library Management App
+# Book Information Service
 
 ### Description
 This is an app that can store information on books and authors.  
-The app is a .NET WebAPI and has been written in C#. The API contacts a database to serve information, this database is stored in a GCP Cloud SQL instance of type PostgreSQL.  
-It can be accessed by running an instance on local machine and also through the service running on GCP.
+The app is a .NET WebAPI and has been written in C#. The API contacts a PostgreSQL database to serve information
+It can be accessed by running an instance on local machine.
 
 ### How to access the app
 - To run the app on local machine
@@ -19,7 +17,6 @@ It can be accessed by running an instance on local machine and also through the 
         ```Powershell
             docker compose down
         ```
-- To access the app through GCP service, visit [`http://34.133.246.114/library/`](http://34.133.246.114/library/)
 
 ### How to use the app
 The app provides standard CRUD functionalities which can be used in the following manner -
@@ -32,19 +29,19 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Function</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/">/library</a></td>
+    <td><a href="http://localhost:3000/library/">/library</a></td>
     <td><i>Empty</i></td>
     <td><i>Empty</i></td>
     <td>Returns a list of books and their authors</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/books">/library/books</a></td>
+    <td><a href="http://localhost:3000/library/books">/library/books</a></td>
     <td><i>Empty</i></td>
     <td><i>Empty</i></td>
     <td>Returns a list of books and their details</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/books/search">/library/books/search</a></td>
+    <td><a href="http://localhost:3000/library/books/search">/library/books/search</a></td>
     <td>
 
     ```json
@@ -58,13 +55,13 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Searches a book by name and returns its details</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/authors">/library/authors</a></td>
+    <td><a href="http://localhost:3000/library/authors">/library/authors</a></td>
     <td><i>Empty</i></td>
     <td><i>Empty</i></td>
     <td>Returns a list of authors and their details</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/authors/search">/library/authors/search</a></td>
+    <td><a href="http://localhost:3000/library/authors/search">/library/authors/search</a></td>
     <td>
 
     ```json
@@ -87,7 +84,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Function</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/">/library</a></td>
+    <td><a href="http://localhost:3000/library/">/library</a></td>
     <td>
 
     ```json
@@ -104,7 +101,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Creates a new book and author mapping</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/books">/library/books</a></td>
+    <td><a href="http://localhost:3000/library/books">/library/books</a></td>
     <td>
 
     ```json
@@ -119,7 +116,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Creates a new book entry</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/authors">/library/authors</a></td>
+    <td><a href="http://localhost:3000/library/authors">/library/authors</a></td>
     <td>
 
     ```json
@@ -143,7 +140,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Function</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/books">/library/books</a></td>
+    <td><a href="http://localhost:3000/library/books">/library/books</a></td>
     <td>
 
     ```json
@@ -161,7 +158,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Updates an existing book entry</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/authors">/library/authors</a></td>
+    <td><a href="http://localhost:3000/library/authors">/library/authors</a></td>
     <td>
 
     ```json
@@ -186,7 +183,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Function</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/">/library</a></td>
+    <td><a href="http://localhost:3000/library/">/library</a></td>
     <td>
 
     ```json
@@ -203,7 +200,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Deletes an existing book and author mapping</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/books">/library/books</a></td>
+    <td><a href="http://localhost:3000/library/books">/library/books</a></td>
     <td>
 
     ```json
@@ -218,7 +215,7 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Deletes an existing book entry</td>
     </tr>
     <tr>
-    <td><a href="http://34.133.246.114/library/authors">/library/authors</a></td>
+    <td><a href="http://localhost:3000/library/authors">/library/authors</a></td>
     <td>
 
     ```json
@@ -233,16 +230,3 @@ The app provides standard CRUD functionalities which can be used in the followin
     <td>Deletes an existing author entry</td>
     </tr>
     </table>
-
-### Specifications
-Create a data model of the books and authors and develop CRUD REST APIs to manage it.  
-The API should be developed and published as in the first assignment, i.e., it should be dockerized and published through a CICD pipeline.
-
-### Assignment Tasks
-1. ~~Design the data schema for a relational database (use PostgreSQL), and use SQL statements to create the needed tables~~
-
-2. ~~Use DotNet tools to create the matching classes in C# and associate them with the database tables (probably DotNet has some ORM – Object Relational Mapping) to aid this part, that is to persist in-memory objects to a database, and retrieve them from the database to memory~~ The database queries have been written without the use of an ORM
-
-3. ~~Design and implement the API endpoints to manage the data model (support CRUD operation through standart HTTP REST semantics)~~
-
-4. ~~Develop, Dockerize and Deploy as in the first Assignment.~~
