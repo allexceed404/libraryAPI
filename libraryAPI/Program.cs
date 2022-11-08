@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using libraryAPI.EfCore;
+using libraryAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,11 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+// AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+Console.WriteLine("Going to sleep....");
+System.Threading.Thread.Sleep(15000);
+Console.WriteLine("Continuing execution....");
+app.MigrationDatabase();
 app.UseAuthorization();
 
 app.MapControllers();

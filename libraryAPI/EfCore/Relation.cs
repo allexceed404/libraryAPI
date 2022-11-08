@@ -1,16 +1,13 @@
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace libraryAPI.EfCore;
 
 [Table("relation")]
 public class Relation
 {
-    [Key, Required]
-    public string? book_name { get; set; }         
-    // [Key, Required]
-	public DateTime? book_date_of_first_publication  { get; set; }
-    // [Key, Required]
-    public string? author_name { get; set; }
-    // [Key, Required]
-    public DateTime? author_date_of_birth { get; set; }
+    public string? bookname { get; set; }
+    public DateTime? bookdate_of_first_publication { get; set; }
+    public Book book { get; set; }
+    public string? authorname { get; set; }
+    public DateTime? authordate_of_birth { get; set; }
+    public Author author { get; set; }
 }
